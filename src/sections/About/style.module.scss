@@ -1,0 +1,27 @@
+@use '../../styles/vars.scss' as vars;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .diamond {
+    color: vars.$light-blue;
+  }
+  .hacks {
+    color: vars.$orange;
+  }
+  .description {
+    display: flex;
+    gap: 2rem;
+  }
+  .prompt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .label {
+    color: vars.$orange;
+  }
+}
