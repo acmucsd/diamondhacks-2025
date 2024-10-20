@@ -1,8 +1,4 @@
-@use '../styles/vars.scss' as vars;
-
 .main {
-  background: linear-gradient(180deg, #151625 0%, #4E4F64 100%);
-  color: vars.$white;
-  height: 100%;
-  padding: 7.5rem;
+  margin: 0 auto;
+  width: 80%;
 }
