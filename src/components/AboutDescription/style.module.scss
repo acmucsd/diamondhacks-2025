@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin: 0 auto;
+  width: 80%;
 
   .diamond {
     color: vars.$light-blue;

@@ -4,7 +4,7 @@ import styles from './style.module.scss';
 const AboutDescription = () => {
   return (
     <div className={styles.container}>
-      <Typography className={styles.title} variant="display/heavy/small">
+      <Typography className={styles.title} variant="headline/heavy/medium">
         What is <span className={styles.diamond}>Diamond</span>
         <span className={styles.hacks}>Hacks</span>?
       </Typography>

@@ -1,13 +1,57 @@
+@use '../../styles/vars.scss' as vars;
+
 .container {
+  position: relative;
   overflow: hidden;
-  height: 300px;
+
   .carousel {
     display: flex;
-    .image {
-        width: 368px;
-        height: 100%;
-        flex: 1 0 0;
-        border-radius: 16px;
+    width: 100%;
+    height: 300px;
+    gap: 1.25rem;
+    animation: slide 60s linear infinite;
+
+    @media screen and (max-width: vars.$breakpoint-md) {
+      animation: none;
     }
+
+    .image {
+      width: 368px;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+      aspect-ratio: 16 / 9;
+      object-position: 40% 20%;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      90deg,
+      #28293a 0%,
+      rgba(0, 0, 0, 0) 20%,
+      rgba(0, 0, 0, 0) 80%,
+      #28293a 100%
+    );
+    z-index: 1;
+  }
+
+  @media screen and (max-width: vars.$breakpoint-md) {
+    overflow-x: scroll;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
