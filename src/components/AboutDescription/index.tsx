@@ -1,10 +1,10 @@
 import Typography from '@/components/Typography';
 import styles from './style.module.scss';
 
-const AboutDescription = () => {
+const AboutDescription: React.FC = () => {
   return (
     <div className={styles.container}>
-      <Typography className={styles.title} variant="headline/heavy/medium">
+      <Typography className={styles.title} variant="display/heavy/small">
         What is <span className={styles.diamond}>Diamond</span>
         <span className={styles.hacks}>Hacks</span>?
       </Typography>

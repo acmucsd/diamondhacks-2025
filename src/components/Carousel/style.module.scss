@@ -11,17 +11,11 @@
     gap: 1.25rem;
     animation: slide 60s linear infinite;
 
-    @media screen and (max-width: vars.$breakpoint-md) {
-      animation: none;
-    }
-
     .image {
-      width: 368px;
+      position: relative;
+      min-width: 368px;
       height: 100%;
-      object-fit: cover;
       border-radius: 16px;
-      aspect-ratio: 16 / 9;
-      object-position: 40% 20%;
     }
   }
 
@@ -40,10 +34,6 @@
       #28293a 100%
     );
     z-index: 1;
-  }
-
-  @media screen and (max-width: vars.$breakpoint-md) {
-    overflow-x: scroll;
   }
 }
 

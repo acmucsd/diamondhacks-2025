@@ -5,4 +5,19 @@
   flex-direction: column;
   gap: 6.25rem;
   height: 100%;
+
+  .isMobile {
+    display: none;
+  }
+
+  @media screen and (max-width: vars.$breakpoint-md) {
+    .isMobile {
+      margin: 0 auto;
+      display: block;
+    }
+
+    .isDesktop {
+      display: none;
+    }
+  }
 }
