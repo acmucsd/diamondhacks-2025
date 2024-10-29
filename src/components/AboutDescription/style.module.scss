@@ -18,12 +18,15 @@
     color: vars.$light-blue;
     word-break: break-word;
   }
+
   .hacks {
     color: vars.$orange;
   }
+
   .emphasis {
     color: vars.$yellow;
   }
+
   .description {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -33,6 +36,7 @@
       grid-template-columns: 1fr;
     }
   }
+  
   .prompt {
     display: flex;
     flex-direction: column;

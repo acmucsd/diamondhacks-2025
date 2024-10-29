@@ -19,6 +19,7 @@
       aspect-ratio: 1920/1080;
 
       img {
+        object-fit: cover;
         object-position: 40% 20%;
         border-radius: inherit;
       }

@@ -14,7 +14,6 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
             <Image
               src={image}
               alt={`Hackathon Image ${index + 1}`}
-              objectFit="cover"
               sizes="400px"
               fill
             />
@@ -25,7 +24,6 @@ const Carousel: React.FC<CarouselProps> = ({ images }) => {
             <Image
               src={image}
               alt={`Hackathon Image ${index + 1}`}
-              objectFit="cover"
               sizes="400px"
               fill
             />
