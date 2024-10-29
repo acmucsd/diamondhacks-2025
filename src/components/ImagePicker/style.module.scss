@@ -1,15 +1,44 @@
 @use '../../styles/vars.scss' as vars;
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
 
-  .image {
-    position: relative;
-    max-width: 600px;
+  .imageWrapper {
+    display: flex;
+    transition: transform 0.5s ease;
     width: 100%;
-    height: 100%;
-    border-radius: 16px;
+
+    .image {
+      position: relative;
+      min-width: 100%;
+      height: auto;
+      border-radius: 16px;
+      aspect-ratio: 1920/1080;
+
+      img {
+        object-position: 40% 20%;
+        border-radius: inherit;
+      }
+    }
+  }
+
+  .dots {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: vars.$black;
+    }
+
+    .active {
+      background-color: vars.$light-blue;
+    }
   }
 }

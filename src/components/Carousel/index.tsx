@@ -1,14 +1,11 @@
 import Image from 'next/image';
 import styles from './style.module.scss';
 
-const Carousel: React.FC = () => {
-  const images: string[] = [
-    '/assets/hackathon1.png',
-    '/assets/hackathon2.png',
-    '/assets/hackathon3.png',
-    '/assets/hackathon4.png',
-  ];
+interface CarouselProps {
+  images: string[];
+}
 
+const Carousel: React.FC<CarouselProps> = ({ images }) => {
   return (
     <div className={styles.container}>
       <div className={styles.carousel}>
@@ -18,7 +15,6 @@ const Carousel: React.FC = () => {
               src={image}
               alt={`Hackathon Image ${index + 1}`}
               objectFit="cover"
-              style={{ aspectRatio: '16/9', objectPosition: '40% 20%', borderRadius: 'inherit' }}
               sizes="400px"
               fill
             />
@@ -30,7 +26,6 @@ const Carousel: React.FC = () => {
               src={image}
               alt={`Hackathon Image ${index + 1}`}
               objectFit="cover"
-              style={{ aspectRatio: '16/9', objectPosition: '40% 20%', borderRadius: 'inherit' }}
               sizes="400px"
               fill
             />

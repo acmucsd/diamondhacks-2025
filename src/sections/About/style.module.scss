@@ -4,16 +4,18 @@
   display: flex;
   flex-direction: column;
   gap: 6.25rem;
-  height: 100%;
 
   .isMobile {
     display: none;
   }
 
   @media screen and (max-width: vars.$breakpoint-md) {
+    gap: 3.25rem;
+    
     .isMobile {
-      margin: 0 auto;
       display: block;
+      margin: 0 auto;
+      width: 80%;
     }
 
     .isDesktop {

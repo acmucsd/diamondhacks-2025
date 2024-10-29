@@ -6,7 +6,7 @@
 
   .carousel {
     display: flex;
-    width: 100%;
+    width: 200%;
     height: 300px;
     gap: 1.25rem;
     animation: slide 60s linear infinite;
@@ -16,6 +16,11 @@
       min-width: 368px;
       height: 100%;
       border-radius: 16px;
+
+      img {
+        object-position: 40% 20%;
+        border-radius: inherit;
+      }
     }
   }
 
@@ -35,6 +40,7 @@
     );
     z-index: 1;
   }
+
 }
 
 @keyframes slide {
@@ -42,6 +48,6 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(calc(-368px * 4 - 1.25rem * 4));
   }
 }

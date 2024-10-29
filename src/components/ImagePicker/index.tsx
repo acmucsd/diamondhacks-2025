@@ -3,36 +3,69 @@ import Image from 'next/image';
 import { useState } from 'react';
 import styles from './style.module.scss';
 
-const ImagePicker: React.FC = () => {
-  const images: string[] = [
-    '/assets/hackathon1.png',
-    '/assets/hackathon2.png',
-    '/assets/hackathon3.png',
-    '/assets/hackathon4.png',
-  ];
+interface ImagePickerProps {
+  images: string[];
+}
+
+const ImagePicker: React.FC<ImagePickerProps> = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  let touchStartX = 0;
+  let touchEndX = 0;
+
   const nextImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    if (currentIndex < images.length - 1) {
+      setCurrentIndex(prevIndex => prevIndex + 1);
+    }
+  };
+
+  const prevImage = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(prevIndex => prevIndex - 1);
+    }
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX = e.touches[0].clientX;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX - touchEndX > 50) {
+      nextImage();
+    }
+    if (touchStartX - touchEndX < -50) {
+      prevImage();
+    }
   };
 
   return (
     <div className={styles.container}>
-        <div className={styles.image}>
-          <Image
-            src={images[currentIndex]}
-            alt={`Hackathon Image ${currentIndex + 1}`}
-            objectFit="contain"
-            style={{ aspectRatio: '16/9', objectPosition: '40% 20%', borderRadius: 'inherit' }}
-            sizes="400px"
-            fill
-          />
-        </div>
-        <div className="dots">
-        {Array.from({ length: 4 }, (_, i) => (
-          <span
-            key={i}
-            className={`dot ${i === currentIndex ? 'active' : ''}`}
-          />
+      <div
+        className={styles.imageWrapper}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {images.map((image: string, index: number) => (
+          <div className={styles.image} key={index}>
+            <Image
+              src={image}
+              alt={`Hackathon Image ${index + 1}`}
+              objectFit="cover"
+              sizes="400px"
+              fill
+            />
+          </div>
+        ))}
+      </div>
+      <div className={styles.dots}>
+        {Array.from({ length: images.length }, (_, i) => (
+          <span key={i} className={`${styles.dot} ${i === currentIndex ? styles.active : ''}`} />
         ))}
       </div>
     </div>
