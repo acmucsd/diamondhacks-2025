@@ -53,12 +53,7 @@ const ImagePicker: React.FC<ImagePickerProps> = ({ images }) => {
       >
         {images.map((image: string, index: number) => (
           <div className={styles.image} key={index}>
-            <Image
-              src={image}
-              alt={`Hackathon Image ${index + 1}`}
-              sizes="400px"
-              fill
-            />
+            <Image src={image} alt={`Hackathon Image ${index + 1}`} sizes="400px" fill />
           </div>
         ))}
       </div>
