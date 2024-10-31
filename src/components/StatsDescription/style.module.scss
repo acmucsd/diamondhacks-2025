@@ -1,0 +1,26 @@
+@use '../../styles/vars.scss' as vars;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
+  width: 80%;
+
+  .title {
+    @media screen and (max-width: vars.$breakpoint-md) {
+      font-size: 2.25rem !important;
+      line-height: 2.625rem !important;
+    }
+  }
+
+  .diamond {
+    color: vars.$light-blue;
+    word-break: break-word;
+  }
+
+  .hacks {
+    color: vars.$orange;
+  }
+  
+}

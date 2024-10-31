@@ -1,0 +1,23 @@
+@use '../../styles/vars.scss' as vars;
+
+.container {
+  display: grid;
+  grid-template-areas: 'diamond innerContainer';
+  align-items: flex-start;
+
+  .innerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .diamond {
+    width: 100%;
+    height: 100%;
+    grid-area: 'diamond';
+    position: relative;
+    aspect-ratio: 1;
+    max-width: 400px;
+    object-fit: 'cover';
+  }
+}
