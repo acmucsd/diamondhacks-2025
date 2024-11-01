@@ -1,14 +1,15 @@
 @use '../../styles/vars.scss' as vars;
 
 .container {
-  display: flex;
+  display: block;
   flex-direction: column;
   gap: 2rem;
-  margin: 0 auto;
-  width: 90%;
+  margin-top: 20px;
+  width: 80%;
+  clear: both;
 
   .title {
-    text-align: right;
+    color: vars.$light-blue;
 
     @media screen and (max-width: vars.$breakpoint-md) {
       font-size: 2.25rem !important;
@@ -16,13 +17,5 @@
     }
   }
 
-  .diamond {
-    color: vars.$light-blue;
-    word-break: break-word;
-  }
-
-  .hacks {
-    color: vars.$orange;
-  }
   
 }
