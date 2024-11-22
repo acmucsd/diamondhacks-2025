@@ -9,9 +9,8 @@ const Statistics: React.FC = () => {
             <div className={styles.diamond}>
                 <Image src="/sliding_diamond.png" 
                     alt="sliding diamond"
-                    width={300}
-                    height={300}
-                    layout="responsive"
+                    layout="fill" 
+                    objectFit="contain"
                 />
             </div>
             <div className={styles.innerContainer}>

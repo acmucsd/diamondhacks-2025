@@ -2,10 +2,10 @@
 
 .container {
   display: flex;
+  justify-content: center;
   align-items: flex-start;
   margin-top: 10px;
   margin-bottom: 10px;
-  width: 80%;
 
   .innerContainer {
     display: flex;
@@ -14,13 +14,14 @@
     flex: 1;
   }
   
+
   .diamond {
-    width: 100%;
-    height: 100%;
     position: relative;
     aspect-ratio: 1;
-    max-width: 400px;
-    object-fit: 'cover';
-    flex: 0 0 30%;
+    flex: 0 0 40%;
+
+    @media screen and (max-width: vars.$breakpoint-md) {
+      display: none;
+    }
   }
 }

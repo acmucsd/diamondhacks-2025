@@ -4,9 +4,9 @@
   display: flex;
   flex-direction: column;
   text-align: right;
-  gap: 2rem;
+  gap: 2.5rem;
   margin: 0 auto;
-  width: 90%;
+  width: 80%;
 
   .title {
     @media screen and (max-width: vars.$breakpoint-md) {
@@ -17,17 +17,17 @@
 
 
   .statNumber1 {
-    font-size: 1.5em;
+    font-size: 1.75em;
     color: vars.$light-blue;
   }
 
   .statNumber2 {
-    font-size: 1.5em;
+    font-size: 1.75em;
     color: vars.$red;
   }
 
   .statNumber3 {
-    font-size: 1.5em;
+    font-size: 1.75em;
     color: vars.$yellow;
   }
   
