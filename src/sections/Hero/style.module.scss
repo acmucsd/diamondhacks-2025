@@ -1,0 +1,15 @@
+@use '../../styles/vars.scss' as vars;
+
+.container {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  justify-items: flex-end;
+  padding-left: 4rem;
+
+  @media screen and (max-width: vars.$breakpoint-lg) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 0px;
+    gap: 8rem;
+  }
+}
