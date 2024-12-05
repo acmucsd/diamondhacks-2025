@@ -4,7 +4,7 @@ import styles from './style.module.scss';
 const LandingImage = () => {
   return (
     <div className={styles.container}>
-        <HeistScene />
+      <HeistScene />
     </div>
   );
 };
