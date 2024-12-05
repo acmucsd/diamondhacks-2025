@@ -89,7 +89,8 @@
   }
   @media screen and (max-width: vars.$breakpoint-lg) {
     align-items: center;
-    gap: 0.5rem !important;
+    gap: 0.5rem;
     max-width: 90%;
+    text-align: center;
   }
 }
