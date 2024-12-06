@@ -17,8 +17,9 @@
 
   .diamond {
     position: relative;
-    aspect-ratio: 1;
+    aspect-ratio: 0.64;
     flex: 0 0 40%;
+    max-height: 600px;
 
     @media screen and (max-width: vars.$breakpoint-md) {
       display: none;
