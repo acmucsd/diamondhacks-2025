@@ -5,10 +5,24 @@ body {
   color: vars.$white;
   margin: 0;
   padding: 0;
-  width: 100%;
   min-height: 100%;
+  overscroll-behavior: none;
+}
+
+html {
+  scroll-behavior: smooth !important;
 }
 
 html {
   background: linear-gradient(180deg, #151625 0%, #4e4f64 100%);
+}
+
+body {
+  padding: 0 vars.$side-padding;
+  margin-top: 8rem;
+
+  @media screen and (max-width: vars.$breakpoint-md) {
+    padding: 0 vars.$side-padding-mobile;
+    margin-top: 4rem;
+  }
 }
