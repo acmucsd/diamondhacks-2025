@@ -26,16 +26,17 @@
   .gradient {
     background: linear-gradient(
       90deg,
-      #e981a0 64.06%,
-      #ff6f6f 69.49%,
-      #f9a857 75.8%,
-      #51c0c0 83.16%,
-      #62b0ff 89.12%,
-      #816dff 97.71%
+      #e981a0 0%,
+      #ff6f6f 16%,
+      #f9a857 32%,
+      #51c0c0 48%,
+      #62b0ff 64%,
+      #816dff 90%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-weight: bold;
   }
 
   .interestForm {

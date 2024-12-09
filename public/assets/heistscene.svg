@@ -87,16 +87,10 @@
 </g>
 </g>
 <defs>
-<filter id="filter0_df_1470_1427" x="0.201953" y="75.9191" width="906.002" height="1053.31" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_f_1470_1427" x="0.201953" y="75.9191" width="906.002" height="1052.71" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="1.2"/>
-<feGaussianBlur stdDeviation="0.6"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1470_1427"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1470_1427" result="shape"/>
-<feGaussianBlur stdDeviation="0.9" result="effect2_foregroundBlur_1470_1427"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="0.9" result="effect1_foregroundBlur_1470_1427"/>
 </filter>
 <filter id="filter1_ii_1470_1427" x="268.762" y="429.045" width="341.511" height="183.034" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>

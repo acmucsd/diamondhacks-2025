@@ -6,7 +6,7 @@ const LandingText = () => {
   return (
     <div className={styles.container}>
       <Typography variant="title/small" className={styles.subheading}>
-        April 5-6, 2025 • hosted by <span className={styles.gradient}>ACM at UC San Diego</span>
+        April 5–6, 2025 • hosted by <span className={styles.gradient}>ACM at UC San Diego</span>
       </Typography>
       <Typography className={styles.header} variant="display/heavy/large">
         DiamondHacks
