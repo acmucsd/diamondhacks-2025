@@ -5,7 +5,9 @@
   flex-direction: column;
   gap: 1.813rem;
   position: relative;
-  top: 20%;
+  z-index: 2;
+  align-self: flex-start;
+  margin-top: 10%;
 
   .subheading {
     @media screen and (max-width: vars.$breakpoint-md) {
@@ -89,9 +91,13 @@
     }
   }
   @media screen and (max-width: vars.$breakpoint-lg) {
+    align-self: center;
+    margin-top: unset;
     align-items: center;
     gap: 0.5rem;
     max-width: 90%;
     text-align: center;
+    flex-shrink: 0; // Prevent shrinking in flexbox
+    min-height: fit-content; // Ensure it maintains its content height
   }
 }

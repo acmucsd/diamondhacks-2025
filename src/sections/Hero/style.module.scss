@@ -1,15 +1,16 @@
 @use '../../styles/vars.scss' as vars;
 
 .container {
-  display: grid;
-  grid-template-columns: 45% 55%;
-  justify-items: flex-end;
-  padding-left: 4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-height: min(1000px, 100vh);
+  justify-content: center;
 
   @media screen and (max-width: vars.$breakpoint-lg) {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    padding: 0px;
-    gap: 8rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4rem;
+    max-height: unset;
   }
 }
