@@ -1,8 +1,7 @@
 @use './vars.scss' as vars;
 
 html,
-body,
-footer {
+body {
   color: vars.$white;
   margin: 0;
   padding: 0;

@@ -13,10 +13,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={dmSans.className}>{children}</body>
-      <footer className={dmSans.className}>
+      <body className={dmSans.className}>
+        {children}
         <Footer />
-      </footer>
+      </body>
     </html>
   );
 }

@@ -8,6 +8,7 @@
   align-items: center;
   padding: 8rem vars.$side-padding;
   position: relative;
+  margin: 0 calc(vars.$side-padding * -1);
 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
@@ -17,6 +18,9 @@
   left: 0;
   bottom: 0;
   z-index: -1;
+  max-width: min(100%, 580px);
+  height: auto;
+  object-fit: contain;
 }
 
 .backgroundRight {
@@ -24,6 +28,9 @@
   right: 0;
   bottom: 0;
   z-index: -1;
+  max-width: min(100%, 850px);
+  height: auto;
+  object-fit: contain;
 }
 
 .links {
