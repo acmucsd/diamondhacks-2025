@@ -7,16 +7,21 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import styles from './style.module.scss';
 import Typography from '../Typography';
+import { Question } from '@/sections/FAQ/questions';
 
-interface FaqProps {
-  data: { question: string; answer: string | any }[];
+interface FAQAccordionProps {
+  data: Question[];
 }
 
-export default function FAQ({ data }: FaqProps) {
-  const [expandedIndex, setExpandedIndex] = useState<number>(-1);
+export default function FAQ({ data }: FAQAccordionProps) {
+  const [expandedIndices, setExpandedIndices] = useState<number[]>([]);
 
   const handleChange = (panelIndex: number) => (_e: React.SyntheticEvent, newExpanded: boolean) => {
-    setExpandedIndex(newExpanded ? panelIndex : -1);
+    if (newExpanded) {
+      setExpandedIndices([...expandedIndices, panelIndex]);
+    } else {
+      setExpandedIndices(expandedIndices.filter(index => index !== panelIndex));
+    }
   };
 
   return (
@@ -24,7 +29,7 @@ export default function FAQ({ data }: FaqProps) {
       {data.map((questionObject, index) => (
         <Accordion
           elevation={0}
-          expanded={expandedIndex === index}
+          expanded={expandedIndices.includes(index)}
           onChange={handleChange(index)}
           className={`${styles.accordionRoot} ${styles.accordion}`}
           key={questionObject.question}

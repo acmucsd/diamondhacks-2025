@@ -1,20 +1,20 @@
 import Typography from '@/components/Typography';
 import Link from 'next/link';
 
-interface Question {
+export interface Question {
   question: string;
-  answer: string | React.ReactNode;
+  answer: React.ReactNode;
 }
 
 export const QUESTIONS: Question[] = [
   {
     question: 'How can I register for DiamondHacks?',
     answer: (
-      <Typography variant="body/medium">
+      <>
         Fill out the interest form here (
         <Link href="https://acmurl.com/diamondhacks">https://acmurl.com/diamondhacks</Link>) to be
         notified when applications go live!
-      </Typography>
+      </>
     ),
   },
   {
@@ -35,19 +35,19 @@ export const QUESTIONS: Question[] = [
   {
     question: 'Who can attend DiamondHacks?',
     answer: (
-      <Typography variant="body/medium">
+      <>
         Any undergraduate students enrolled in <b>any</b> college or university are eligible to
         attend!
-      </Typography>
+      </>
     ),
   },
   {
     question: 'Who can I reach out to for questions and concerns?',
     answer: (
-      <Typography variant="body/medium">
+      <>
         Please reach out to <Link href="mailto:hackathon@acmucsd.org">hackathon@acmucsd.org</Link>{' '}
         with any questions or concerns about DiamondHacks!
-      </Typography>
+      </>
     ),
   },
 ];
