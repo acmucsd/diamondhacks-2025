@@ -16,19 +16,21 @@
 
   .diamond {
     position: relative;
-    aspect-ratio: 0.64;
-    flex: 0 0 40%;
-    max-height: 600px;
+    height: 896px;
+    width: 350px;
+  }
 
-    .slidingDiamond {
-      width: auto;
-      position: absolute;
-      top: 0;
-      left: calc(-1 * vars.$side-padding);
-      object-fit: contain;
-    }
+  .slidingDiamond {
+    position: absolute;
+    top: 0;
+    left: calc(-1 * vars.$side-padding);
+    object-fit: contain;
+  }
 
-    @media screen and (max-width: vars.$breakpoint-md) {
+  @media screen and (max-width: vars.$breakpoint-md) {
+    height: auto;
+
+    .diamond {
       display: none;
     }
   }

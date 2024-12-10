@@ -1,0 +1,6 @@
+@use '../../styles/vars.scss' as vars;
+
+.title {
+  margin-bottom: 2rem;
+  color: vars.$light-blue;
+}
