@@ -5,6 +5,11 @@
   flex-direction: column;
   gap: 6.25rem;
 
+  .isDesktop {
+    margin: 0 calc(-1 * vars.$side-padding);
+    width: calc(100% + 2 * vars.$side-padding);
+  }
+
   .isMobile {
     display: none;
   }
