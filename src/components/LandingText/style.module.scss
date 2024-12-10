@@ -9,9 +9,19 @@
   align-self: flex-start;
   margin-top: 10%;
 
-  .subheading {
-    @media screen and (max-width: vars.$breakpoint-md) {
-      font-size: 1rem !important;
+  .subheadingMobile {
+    display: none;
+    font-size: 1rem !important;
+    line-height: 1.5rem !important;
+    flex-direction: column;
+  }
+  @media screen and (max-width: vars.$breakpoint-md) {
+    .subheadingDesktop {
+      display: none;
+    }
+
+    .subheadingMobile {
+      display: flex;
     }
   }
 

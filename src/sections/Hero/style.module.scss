@@ -47,10 +47,12 @@
   .peekersWrapper {
     $peekersImageWidth: 916;
     $peekHoleWidth: 571;
+    $peekHoleHeight: 155;
 
     grid-area: peekers;
     max-width: calc($peekHoleWidth * 1px);
-    height: 15rem;
+    aspect-ratio: $peekHoleWidth / $peekHoleHeight;
+    margin-bottom: 5rem;
     position: relative;
 
     .peekers {
