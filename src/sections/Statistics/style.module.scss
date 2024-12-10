@@ -1,0 +1,35 @@
+@use '../../styles/vars.scss' as vars;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  .innerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1;
+  }
+
+  .diamond {
+    position: relative;
+    aspect-ratio: 0.64;
+    flex: 0 0 40%;
+    max-height: 600px;
+
+    .slidingDiamond {
+      width: auto;
+      position: absolute;
+      top: 0;
+      left: calc(-1 * vars.$side-padding);
+      object-fit: contain;
+    }
+
+    @media screen and (max-width: vars.$breakpoint-md) {
+      display: none;
+    }
+  }
+}

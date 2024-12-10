@@ -7,6 +7,7 @@ import Discord from '../../../public/assets/discord.svg';
 import Facebook from '../../../public/assets/facebook.svg';
 import DiamondPileLeft from '../../../public/assets/diamond-pile-left.png';
 import DiamondPileRight from '../../../public/assets/diamond-pile-right.png';
+import AcmLogo from '../../../public/assets/acm-logo.png';
 
 const Footer: React.FC = () => {
   return (
@@ -18,7 +19,7 @@ const Footer: React.FC = () => {
           <Typography variant="body/large">About Us</Typography>
         </Link>
         <Link href="https://acmucsd.com/">
-          <Image src="/acm-logo.png" alt="ACM" width={144} height={144} />
+          <Image src={AcmLogo} alt="ACM" width={144} height={144} />
         </Link>
         <Link href="https://acmucsd.com/#contact">
           <Typography variant="body/large">Contact Us</Typography>
