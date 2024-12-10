@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import '@/styles/globals.scss';
 import type { Metadata } from 'next';
 import { DM_Sans } from 'next/font/google';
@@ -12,7 +13,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={dmSans.className}>{children}</body>
+      <body className={dmSans.className}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
