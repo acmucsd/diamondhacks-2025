@@ -25,6 +25,7 @@
     top: -6rem;
     z-index: 1;
     pointer-events: none;
+    height: 400px; // So the diamond doesn't slide off the rope
 
     .slidingDiamond {
       position: absolute;

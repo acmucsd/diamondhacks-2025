@@ -18,7 +18,7 @@
 }
 
 .accordionRoot {
-  background-color: transparent;
+  background-color: transparent !important;
   border-top: 1px solid vars.$neutral;
 
   &:before {
