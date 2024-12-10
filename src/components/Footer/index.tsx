@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
           <Typography variant="body/large">About Us</Typography>
         </Link>
         <Link href="https://acmucsd.com/">
-          <Image src="/acm-logo.png" alt="ACM" width={144} height={144} />
+          <Image src="/assets/acm-logo.png" alt="ACM" width={144} height={144} />
         </Link>
         <Link href="https://acmucsd.com/#contact">
           <Typography variant="body/large">Contact Us</Typography>

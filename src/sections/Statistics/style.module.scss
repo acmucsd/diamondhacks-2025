@@ -20,6 +20,14 @@
     flex: 0 0 40%;
     max-height: 600px;
 
+    .slidingDiamond {
+      width: auto;
+      position: absolute;
+      top: 0;
+      left: calc(-1 * vars.$side-padding);
+      object-fit: contain;
+    }
+
     @media screen and (max-width: vars.$breakpoint-md) {
       display: none;
     }

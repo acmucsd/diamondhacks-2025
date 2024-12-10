@@ -45,7 +45,7 @@ const v2StandardSizes: Record<V2StandardStyle, Record<V2Size, string>> = {
 
 const v2StandardHeights: Record<V2StandardStyle, Record<V2Size, string>> = {
   title: {
-    large: '2.375rem',
+    large: '2.675rem',
     medium: '2.125rem',
     small: '1.875rem',
   },
