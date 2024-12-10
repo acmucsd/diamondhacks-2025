@@ -24,9 +24,11 @@
 
     .image {
       position: absolute;
+      top: 0;
       left: -30rem;
       right: -30rem;
       margin: 0 auto;
+      z-index: -1;
     }
   }
 
@@ -40,7 +42,6 @@
 
     .peekers {
       width: calc($peekersImageWidth / $peekHoleWidth * 100%);
-      top: 0;
     }
   }
 
@@ -54,7 +55,7 @@
 
     .display {
       width: calc($displayImageWidth / $pillarWidth * 100%);
-      top: -60%;
+      margin-top: -60%;
     }
   }
 }
