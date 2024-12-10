@@ -12,7 +12,7 @@ const Hero = () => {
           className={`${styles.image} ${styles.peekers}`}
         />
       </div>
-      <LandingText />
+      <LandingText className={styles.text} />
       <div className={`${styles.imageWrapper} ${styles.displayWrapper}`}>
         <HeistJewelDisplay
           preserveAspectRatio="xMidYMid meet"

@@ -6,29 +6,41 @@
     'text peekers'
     'text display';
   grid-template-columns: auto 1fr;
+  gap: 0 1rem;
   align-items: flex-start;
-  max-height: min(1000px, 100vh);
+  padding: 0 vars.$side-padding;
+  margin: 0 calc(vars.$side-padding * -1);
+  overflow: hidden;
+  margin-bottom: -35rem;
+
+  @media screen and (max-width: vars.$breakpoint-md) {
+    padding: 0 vars.$side-padding-mobile;
+    margin: 0 calc(vars.$side-padding-mobile * -1);
+  }
+
+  .text {
+    grid-area: text;
+    max-height: min(60rem, 100vh);
+  }
 
   @media screen and (max-width: vars.$breakpoint-lg) {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 4rem;
-    max-height: unset;
+    margin-bottom: -30rem;
+
+    .text {
+      max-height: unset;
+    }
   }
 
   .imageWrapper {
     justify-self: center;
     width: 100%;
-    position: relative;
 
     .image {
-      position: absolute;
-      top: 0;
-      left: -30rem;
-      right: -30rem;
-      margin: 0 auto;
-      z-index: -1;
+      pointer-events: none;
     }
   }
 
@@ -39,8 +51,14 @@
     grid-area: peekers;
     max-width: calc($peekHoleWidth * 1px);
     height: 15rem;
+    position: relative;
 
     .peekers {
+      position: absolute;
+      top: 0;
+      left: -30rem;
+      right: -30rem;
+      margin: 0 auto;
       width: calc($peekersImageWidth / $peekHoleWidth * 100%);
     }
   }
@@ -51,9 +69,11 @@
 
     grid-area: display;
     max-width: calc($pillarWidth * 1px);
-    height: 30rem;
+    display: flex;
+    justify-content: center;
 
     .display {
+      flex: none;
       width: calc($displayImageWidth / $pillarWidth * 100%);
       margin-top: -60%;
     }

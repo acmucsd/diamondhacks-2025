@@ -2,9 +2,13 @@ import Typography from '@/components/Typography';
 import Link from 'next/link';
 import styles from './style.module.scss';
 
-const LandingText = () => {
+interface LandingTextProps {
+  className?: string;
+}
+
+const LandingText = ({ className = '' }: LandingTextProps) => {
   return (
-    <div className={styles.container}>
+    <div className={`${className} ${styles.container}`}>
       <Typography variant="title/small" className={styles.subheading}>
         April 5–6, 2025 • hosted by <span className={styles.gradient}>ACM at UC San Diego</span>
       </Typography>

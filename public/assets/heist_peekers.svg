@@ -1,5 +1,5 @@
 <svg viewBox="0 0 916 778" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_f_1470_1429)">
+<g style="mix-blend-mode:overlay" filter="url(#filter0_f_1470_1429)">
 <path d="M2 775.61L172.16 77L743.103 77L913.263 775.61L2 775.61Z" fill="url(#paint0_linear_1470_1429)"/>
 </g>
 <mask id="mask0_1470_1429" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="172" y="0" width="572" height="156">
@@ -40,8 +40,8 @@
 <feGaussianBlur stdDeviation="0.9" result="effect1_foregroundBlur_1470_1429"/>
 </filter>
 <linearGradient id="paint0_linear_1470_1429" x1="420.749" y1="173.776" x2="420.749" y2="353.445" gradientUnits="userSpaceOnUse">
-<stop stop-color="#303250"/>
-<stop offset="1" stop-color="#303250" stop-opacity="0"/>
+<stop stop-color="white"/>
+<stop offset="1" stop-color="#999999" stop-opacity="0"/>
 </linearGradient>
 <linearGradient id="paint1_linear_1470_1429" x1="458.025" y1="270.318" x2="458.025" y2="-78.0458" gradientUnits="userSpaceOnUse">
 <stop stop-color="#0B1124"/>
