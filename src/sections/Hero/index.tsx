@@ -7,11 +7,17 @@ const Hero = () => {
   return (
     <div className={styles.container}>
       <div className={`${styles.imageWrapper} ${styles.peekersWrapper}`}>
-        <HeistPeekers className={`${styles.image} ${styles.peekers}`} />
+        <HeistPeekers
+          preserveAspectRatio="xMidYMid meet"
+          className={`${styles.image} ${styles.peekers}`}
+        />
       </div>
       <LandingText />
       <div className={`${styles.imageWrapper} ${styles.displayWrapper}`}>
-        <HeistJewelDisplay className={`${styles.image} ${styles.display}`} />
+        <HeistJewelDisplay
+          preserveAspectRatio="xMidYMid meet"
+          className={`${styles.image} ${styles.display}`}
+        />
       </div>
     </div>
   );

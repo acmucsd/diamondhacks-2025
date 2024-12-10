@@ -20,6 +20,7 @@ html {
 body {
   padding: 0 vars.$side-padding;
   margin-top: 8rem;
+  overflow-x: hidden;
 
   @media screen and (max-width: vars.$breakpoint-md) {
     padding: 0 vars.$side-padding-mobile;

@@ -24,29 +24,37 @@
 
     .image {
       position: absolute;
-      left: -50%;
-      right: -50%;
+      left: -30rem;
+      right: -30rem;
       margin: 0 auto;
     }
   }
 
   .peekersWrapper {
+    $peekersImageWidth: 916;
+    $peekHoleWidth: 571;
+
     grid-area: peekers;
-    max-width: 36rem;
-    height: 10rem;
+    max-width: calc($peekHoleWidth * 1px);
+    height: 15rem;
 
     .peekers {
+      width: calc($peekersImageWidth / $peekHoleWidth * 100%);
       top: 0;
     }
   }
 
   .displayWrapper {
+    $displayImageWidth: 788;
+    $pillarWidth: 430;
+
     grid-area: display;
-    max-width: 30rem;
+    max-width: calc($pillarWidth * 1px);
     height: 30rem;
 
     .display {
-      top: -15rem;
+      width: calc($displayImageWidth / $pillarWidth * 100%);
+      top: -60%;
     }
   }
 }
