@@ -11,6 +11,11 @@
   margin: 0 calc(vars.$side-padding * -1);
 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+  @media screen and (max-width: vars.$breakpoint-md) {
+    padding: 4rem vars.$side-padding-mobile;
+    margin: 0 calc(vars.$side-padding-mobile * -1);
+  }
 }
 
 .backgroundLeft {
@@ -18,9 +23,13 @@
   left: 0;
   bottom: 0;
   z-index: -1;
-  max-width: min(100%, 580px);
+  max-width: min(100% - 2 * vars.$side-padding, 580px);
   height: auto;
   object-fit: contain;
+
+  @media screen and (max-width: vars.$breakpoint-md) {
+    max-width: min(100% - 2 * vars.$side-padding-mobile, 580px);
+  }
 }
 
 .backgroundRight {
@@ -28,9 +37,13 @@
   right: 0;
   bottom: 0;
   z-index: -1;
-  max-width: min(100%, 850px);
+  max-width: min(100% - 2 * vars.$side-padding, 850px);
   height: auto;
   object-fit: contain;
+
+  @media screen and (max-width: vars.$breakpoint-md) {
+    max-width: min(100% - 2 * vars.$side-padding-mobile, 850px);
+  }
 }
 
 .links {
