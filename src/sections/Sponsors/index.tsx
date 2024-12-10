@@ -9,7 +9,9 @@ const Sponsors: React.FC = () => {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
-        <Typography variant="display/heavy/small">Thank you to our past sponsors...</Typography>
+        <Typography variant="display/heavy/small" className={styles.title}>
+          Thank you to our past sponsors...
+        </Typography>
         <div className={styles.sponsorLogos}>
           {SPONSORS.map(sponsor => (
             <Link href={sponsor.link} key={sponsor.name}>
