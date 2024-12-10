@@ -8,6 +8,7 @@
   z-index: 2;
   align-self: flex-start;
   margin-top: 10%;
+  grid-area: text;
 
   .subheading {
     @media screen and (max-width: vars.$breakpoint-md) {

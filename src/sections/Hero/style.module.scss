@@ -1,16 +1,52 @@
 @use '../../styles/vars.scss' as vars;
 
 .container {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-areas:
+    'text peekers'
+    'text display';
+  grid-template-columns: auto 1fr;
   align-items: flex-start;
   max-height: min(1000px, 100vh);
-  justify-content: center;
 
   @media screen and (max-width: vars.$breakpoint-lg) {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     gap: 4rem;
     max-height: unset;
+  }
+
+  .imageWrapper {
+    justify-self: center;
+    width: 100%;
+    position: relative;
+
+    .image {
+      position: absolute;
+      left: -50%;
+      right: -50%;
+      margin: 0 auto;
+    }
+  }
+
+  .peekersWrapper {
+    grid-area: peekers;
+    max-width: 36rem;
+    height: 10rem;
+
+    .peekers {
+      top: 0;
+    }
+  }
+
+  .displayWrapper {
+    grid-area: display;
+    max-width: 30rem;
+    height: 30rem;
+
+    .display {
+      top: -15rem;
+    }
   }
 }
