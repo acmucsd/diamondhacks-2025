@@ -2,11 +2,21 @@ import Typography from '@/components/Typography';
 import Link from 'next/link';
 import styles from './style.module.scss';
 
-const LandingText = () => {
+interface LandingTextProps {
+  className?: string;
+}
+
+const LandingText = ({ className = '' }: LandingTextProps) => {
   return (
-    <div className={styles.container}>
-      <Typography variant="title/small" className={styles.subheading}>
+    <div className={`${className} ${styles.container}`}>
+      <Typography variant="title/small" className={styles.subheadingDesktop}>
         April 5–6, 2025 • hosted by <span className={styles.gradient}>ACM at UC San Diego</span>
+      </Typography>
+      <Typography variant="title/small" className={styles.subheadingMobile}>
+        <span>April 5–6, 2025</span>
+        <span>
+          Hosted by <span className={styles.gradient}>ACM at UC San Diego</span>
+        </span>
       </Typography>
       <Typography className={styles.header} variant="display/heavy/large">
         DiamondHacks

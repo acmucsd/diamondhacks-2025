@@ -25,6 +25,10 @@
     }
   }
 
+  &:hover .carousel {
+    animation-play-state: paused;
+  }
+
   &::before {
     content: '';
     position: absolute;
