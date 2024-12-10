@@ -6,7 +6,6 @@
     'text peekers'
     'text display';
   grid-template-columns: auto 1fr;
-  gap: 0 1rem;
   align-items: flex-start;
   padding: 0 vars.$side-padding;
   margin: 0 calc(vars.$side-padding * -1);
@@ -21,6 +20,7 @@
   .text {
     grid-area: text;
     max-height: min(60rem, 100vh);
+    margin-top: 10rem;
   }
 
   @media screen and (max-width: vars.$breakpoint-lg) {
@@ -32,6 +32,7 @@
 
     .text {
       max-height: unset;
+      margin-top: 0;
     }
   }
 
