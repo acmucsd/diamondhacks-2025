@@ -16,32 +16,36 @@
 
   .diamond {
     position: relative;
-    aspect-ratio: 0.64;
-    flex: 0 0 40%;
-    max-height: 600px;
+    height: 896px;
+    width: 350px;
+  }
 
-    .slidingDiamondWrapper {
-      position: sticky;
-      top: -6rem;
-      z-index: 1;
-      pointer-events: none;
+  .slidingDiamondWrapper {
+    position: sticky;
+    top: -6rem;
+    z-index: 1;
+    pointer-events: none;
+    height: 400px; // So the diamond doesn't slide off the rope
 
-      .slidingDiamond {
-        position: absolute;
-        top: 0;
-        left: calc(-1 * vars.$side-padding);
-      }
-    }
-
-    .rope {
-      width: auto;
+    .slidingDiamond {
       position: absolute;
       top: 0;
       left: calc(-1 * vars.$side-padding);
-      object-fit: contain;
     }
+  }
 
-    @media screen and (max-width: vars.$breakpoint-md) {
+  .rope {
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: calc(-1 * vars.$side-padding);
+    object-fit: contain;
+  }
+
+  @media screen and (max-width: vars.$breakpoint-md) {
+    height: auto;
+
+    .diamond {
       display: none;
     }
   }

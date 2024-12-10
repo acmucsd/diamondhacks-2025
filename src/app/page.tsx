@@ -1,6 +1,7 @@
 import Statistics from '@/sections/Statistics';
 import Hero from '@/sections/Hero';
 import About from '@/sections/About';
+import FAQ from '@/sections/FAQ';
 import styles from './page.module.scss';
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero />
       <About />
       <Statistics />
+      <FAQ />
     </main>
   );
 }
