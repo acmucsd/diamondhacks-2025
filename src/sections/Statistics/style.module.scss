@@ -20,7 +20,20 @@
     flex: 0 0 40%;
     max-height: 600px;
 
-    .slidingDiamond {
+    .slidingDiamondWrapper {
+      position: sticky;
+      top: -6rem;
+      z-index: 1;
+      pointer-events: none;
+
+      .slidingDiamond {
+        position: absolute;
+        top: 0;
+        left: calc(-1 * vars.$side-padding);
+      }
+    }
+
+    .rope {
       width: auto;
       position: absolute;
       top: 0;
