@@ -12,7 +12,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="about">
       <AboutDescription />
       <div className={styles.isMobile}>
         <ImagePicker images={images} />

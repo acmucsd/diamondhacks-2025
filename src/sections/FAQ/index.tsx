@@ -5,7 +5,7 @@ import FAQAccordion from '@/components/FAQAccordion';
 
 const FAQ: React.FC = () => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="faq">
       <Typography variant="display/heavy/small" className={styles.title}>
         Frequently Asked Questions
       </Typography>

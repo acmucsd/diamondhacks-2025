@@ -23,6 +23,10 @@ body {
 
   @media screen and (max-width: vars.$breakpoint-md) {
     padding: 0 vars.$side-padding-mobile;
-    margin-top: 4rem;
+    margin-top: 6rem;
   }
+}
+
+section {
+  padding-top: 4rem;
 }

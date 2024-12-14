@@ -7,7 +7,7 @@ import { SPONSORS } from './sponsors';
 
 const Sponsors: React.FC = () => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="sponsors">
       <div className={styles.content}>
         <Typography variant="display/heavy/small" className={styles.title}>
           Thank you to our past sponsors...
