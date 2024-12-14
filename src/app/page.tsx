@@ -3,6 +3,7 @@ import Hero from '@/sections/Hero';
 import About from '@/sections/About';
 import FAQ from '@/sections/FAQ';
 import styles from './page.module.scss';
+import Sponsors from '@/sections/Sponsors';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <About />
       <Statistics />
       <FAQ />
+      <Sponsors />
     </main>
   );
 }
