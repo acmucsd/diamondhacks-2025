@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const Statistics: React.FC = () => {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="impact">
       <div className={styles.diamond}>
         <div className={styles.slidingDiamondWrapper}>
           <Image
