@@ -9,7 +9,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { SwipeableDrawer } from '@mui/material';
 
-const links = [
+interface LinkMetadata {
+  name: string;
+  href: string;
+}
+
+const links: LinkMetadata[] = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/#about' },
   { name: 'Impact', href: '/#impact' },
@@ -27,10 +32,13 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const lastUpdate = useRef(0);
 
-  const onLinkClick = () => {
+  const onLinkClick = (link: LinkMetadata) => {
     lastUpdate.current = Date.now();
-    setVisible(false);
     setMobileMenuOpen(false);
+
+    if (link.name !== 'Home') {
+      setVisible(false);
+    }
   };
 
   useEffect(() => {
@@ -82,7 +90,12 @@ export default function Navbar() {
         </div>
         <Typography variant="body/large" className={styles.desktopLinks}>
           {links.map(link => (
-            <Link href={link.href} className={styles.link} onClick={onLinkClick} key={link.name}>
+            <Link
+              href={link.href}
+              className={styles.link}
+              onClick={() => onLinkClick(link)}
+              key={link.name}
+            >
               {link.name}
             </Link>
           ))}
@@ -104,7 +117,12 @@ export default function Navbar() {
       >
         <div className={styles.mobileMenu}>
           {links.map(link => (
-            <Link href={link.href} className={styles.link} onClick={onLinkClick} key={link.name}>
+            <Link
+              href={link.href}
+              className={styles.link}
+              onClick={() => onLinkClick(link)}
+              key={link.name}
+            >
               {link.name}
             </Link>
           ))}

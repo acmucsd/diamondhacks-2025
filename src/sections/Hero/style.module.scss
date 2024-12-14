@@ -8,13 +8,13 @@
   grid-template-columns: auto 1fr;
   align-items: flex-start;
   padding: 0 vars.$side-padding;
-  margin: 0 calc(vars.$side-padding * -1);
+  margin: 8rem calc(vars.$side-padding * -1);
   overflow: hidden;
   margin-bottom: -35rem;
 
   @media screen and (max-width: vars.$breakpoint-md) {
     padding: 0 vars.$side-padding-mobile;
-    margin: 0 calc(vars.$side-padding-mobile * -1);
+    margin: 6rem calc(vars.$side-padding-mobile * -1);
   }
 
   .text {
