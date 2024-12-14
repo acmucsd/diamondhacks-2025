@@ -9,17 +9,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { SwipeableDrawer } from '@mui/material';
 
-const NavbarLogo = () => (
-  <div className={styles.logo}>
-    <Image src="/assets/acm-logo.png" alt="ACM Logo" width={48} height={48} />
-    <Typography variant="body/large" className={styles.logoText}>
-      <b>diamond</b>
-      <br />
-      hacks
-    </Typography>
-  </div>
-);
-
 const links = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/#about' },
@@ -83,10 +72,17 @@ export default function Navbar() {
   return (
     <>
       <div className={`${styles.container} ${visible ? styles.visible : styles.hidden}`}>
-        <NavbarLogo />
+        <div className={styles.logo}>
+          <Image src="/assets/acm-logo.png" alt="ACM Logo" width={48} height={48} />
+          <Typography variant="body/large" className={styles.logoText}>
+            <b>diamond</b>
+            <br />
+            hacks
+          </Typography>
+        </div>
         <Typography variant="body/large" className={styles.desktopLinks}>
           {links.map(link => (
-            <Link href={link.href} className={styles.link}>
+            <Link href={link.href} className={styles.link} key={link.name}>
               {link.name}
             </Link>
           ))}
@@ -108,7 +104,7 @@ export default function Navbar() {
       >
         <div className={styles.mobileMenu}>
           {links.map(link => (
-            <Link href={link.href} className={styles.link} onClick={onLinkClick}>
+            <Link href={link.href} className={styles.link} onClick={onLinkClick} key={link.name}>
               {link.name}
             </Link>
           ))}
