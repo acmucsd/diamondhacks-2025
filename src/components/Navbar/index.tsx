@@ -53,8 +53,8 @@ export default function Navbar() {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('wheel', handleScroll);
+    return () => window.removeEventListener('wheel', handleScroll);
   }, [prevScrollPos]);
 
   useEffect(() => {
@@ -82,7 +82,7 @@ export default function Navbar() {
         </div>
         <Typography variant="body/large" className={styles.desktopLinks}>
           {links.map(link => (
-            <Link href={link.href} className={styles.link} key={link.name}>
+            <Link href={link.href} className={styles.link} onClick={onLinkClick} key={link.name}>
               {link.name}
             </Link>
           ))}
