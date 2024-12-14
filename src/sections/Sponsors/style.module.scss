@@ -86,4 +86,16 @@
 
 .bottomText {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+
+  @media screen and (max-width: vars.$breakpoint-md) {
+    font-size: 1.25rem !important;
+    line-height: 1.5rem !important;
+  }
+}
+
+.buttonText {
+  @media screen and (max-width: vars.$breakpoint-md) {
+    font-size: 1rem !important;
+    line-height: 1.25rem !important;
+  }
 }

@@ -33,7 +33,9 @@ const Sponsors: React.FC = () => {
           className={styles.button}
           data-variant="secondary"
         >
-          <Typography variant="title/small">Sponsor DiamondHacks!</Typography>
+          <Typography variant="title/small" className={styles.buttonText}>
+            Sponsor DiamondHacks!
+          </Typography>
         </Link>
       </div>
       <Image src={HoldingDiamond} alt="Diamond illustration" className={styles.background} />
