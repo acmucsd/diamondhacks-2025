@@ -12,8 +12,10 @@ export const QUESTIONS: Question[] = [
     answer: (
       <>
         Fill out the interest form here (
-        <Link href="https://acmurl.com/diamondhacks">https://acmurl.com/diamondhacks</Link>) to be
-        notified when applications go live!
+        <Link href="https://acmurl.com/diamondhacks-interest-form">
+          https://acmurl.com/diamondhacks-interest-form
+        </Link>
+        ) to be notified when applications go live!
       </>
     ),
   },
