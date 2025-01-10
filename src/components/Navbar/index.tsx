@@ -20,6 +20,7 @@ const links: LinkMetadata[] = [
   { name: 'Impact', href: '/#impact' },
   { name: 'FAQ', href: '/#faq' },
   { name: 'Sponsors', href: '/#sponsors' },
+  { name: 'Apply', href: 'https://portal.diamondhacks.acmucsd.com' },
   { name: '2024', href: 'https://2024.diamondhacks.acmucsd.com' },
 ];
 

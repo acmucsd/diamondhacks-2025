@@ -11,11 +11,9 @@ export const QUESTIONS: Question[] = [
     question: 'How can I register for DiamondHacks?',
     answer: (
       <>
-        Fill out the interest form here (
-        <Link href="https://acmurl.com/diamondhacks-interest-form">
-          https://acmurl.com/diamondhacks-interest-form
-        </Link>
-        ) to be notified when applications go live!
+        Create an account and submit your application on the{' '}
+        <Link href="https://portal.diamondhacks.acmucsd.com/">DiamondHacks Portal</Link> by February
+        28, 2025!
       </>
     ),
   },
