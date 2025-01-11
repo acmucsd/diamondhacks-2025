@@ -23,15 +23,15 @@ const LandingText = ({ className = '' }: LandingTextProps) => {
       </Typography>
       <div className={styles.interestForm}>
         <Typography variant="title/small" className={styles.subtitle}>
-          Interested in joining? Fill out our interest form!
+          Interested in joining? Applications are now open!
         </Typography>
         <div className={styles.buttonContainer}>
           <Link
-            href="https://acmurl.com/hackathon-interest-form"
+            href="https://portal.diamondhacks.acmucsd.com/"
             target="_blank"
             className={styles.button}
           >
-            Notify me for updates
+            Apply Now
           </Link>
           <Link
             href="mailto:hackathon@acmucsd.org"
