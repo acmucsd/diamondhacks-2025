@@ -3,7 +3,7 @@
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
@@ -13,9 +13,11 @@
   background-color: vars.$black;
   transition: transform 0.15s ease-in-out;
   z-index: 2000;
+  gap: 2rem;
 
   @media screen and (max-width: vars.$breakpoint-md) {
     padding: 1rem vars.$side-padding-mobile;
+    width: auto;
   }
 }
 
@@ -34,6 +36,7 @@
   gap: 0.5rem;
 
   @media screen and (max-width: vars.$breakpoint-md) {
+    display: none;
     color: vars.$white;
     align-self: flex-start;
   }
@@ -70,6 +73,7 @@
   width: 24px;
   height: 24px;
   overflow: hidden;
+  margin-left: auto;
 
   .menuIcon {
     position: absolute;
