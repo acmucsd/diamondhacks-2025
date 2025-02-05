@@ -17,6 +17,7 @@
   @media screen and (max-width: vars.$breakpoint-navbar) {
     padding: 1rem vars.$side-padding-mobile;
     width: auto;
+    gap: 0rem;
   }
 }
 
