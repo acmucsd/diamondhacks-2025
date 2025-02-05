@@ -8,6 +8,7 @@ import Link from 'next/link';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { SwipeableDrawer } from '@mui/material';
+import MLHBanner from '../MLHBanner';
 
 interface LinkMetadata {
   name: string;
@@ -25,7 +26,7 @@ const links: LinkMetadata[] = [
 ];
 
 const DEBOUNCE_MS = 150; // Prevent back-to-back updates within 150ms
-const MOBILE_BREAKPOINT = 870; // Matches $breakpoint-md from vars.scss
+const MOBILE_BREAKPOINT = 950;
 
 export default function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -109,6 +110,7 @@ export default function Navbar() {
             <MenuIcon onClick={() => setMobileMenuOpen(true)} />
           </div>
         </div>
+        <MLHBanner />
       </div>
       <SwipeableDrawer
         anchor="top"
