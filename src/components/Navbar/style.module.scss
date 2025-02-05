@@ -3,7 +3,6 @@
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
@@ -13,9 +12,11 @@
   background-color: vars.$black;
   transition: transform 0.15s ease-in-out;
   z-index: 2000;
+  gap: 3rem;
 
-  @media screen and (max-width: vars.$breakpoint-md) {
+  @media screen and (max-width: vars.$breakpoint-navbar) {
     padding: 1rem vars.$side-padding-mobile;
+    width: auto;
   }
 }
 
@@ -33,7 +34,8 @@
   align-items: center;
   gap: 0.5rem;
 
-  @media screen and (max-width: vars.$breakpoint-md) {
+  @media screen and (max-width: vars.$breakpoint-navbar) {
+    display: none;
     color: vars.$white;
     align-self: flex-start;
   }
@@ -49,7 +51,7 @@
   flex-direction: row;
   gap: 2rem;
 
-  @media screen and (max-width: vars.$breakpoint-md) {
+  @media screen and (max-width: vars.$breakpoint-navbar) {
     display: none;
   }
 }
@@ -58,7 +60,7 @@
   text-decoration: none;
   color: vars.$white;
 
-  @media screen and (max-width: vars.$breakpoint-md) {
+  @media screen and (max-width: vars.$breakpoint-navbar) {
     background-color: vars.$black;
     text-align: center;
   }
@@ -70,6 +72,7 @@
   width: 24px;
   height: 24px;
   overflow: hidden;
+  margin-left: auto;
 
   .menuIcon {
     position: absolute;
@@ -85,7 +88,7 @@
     }
   }
 
-  @media screen and (max-width: vars.$breakpoint-md) {
+  @media screen and (max-width: vars.$breakpoint-navbar) {
     display: block;
   }
 }

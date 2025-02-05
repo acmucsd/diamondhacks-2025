@@ -14,7 +14,6 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.1.10",
     "@mui/material": "^6.1.10",
-    "@svgr/webpack": "^8.1.0",
     "@types/node": "20.6.0",
     "@types/react-dom": "18.2.7",
     "next": "^13.4.16",
@@ -23,6 +22,7 @@
     "react-is": "^19.0.0"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/react": "^18.3.12",
     "eslint": "^8.49.0",
     "eslint-config-next": "^13.4.19",

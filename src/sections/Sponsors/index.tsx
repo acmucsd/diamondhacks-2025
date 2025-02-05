@@ -10,13 +10,13 @@ const Sponsors: React.FC = () => {
     <section className={styles.container} id="sponsors">
       <div className={styles.content}>
         <Typography variant="display/heavy/small" className={styles.title}>
-          Thank you to our past sponsors...
+          Thank you to our sponsors...
         </Typography>
         <div className={styles.sponsorLogos}>
           {SPONSORS.map(sponsor => (
             <Link href={sponsor.link} key={sponsor.name}>
               <Image
-                src={`/sponsors/old/${sponsor.logo}`}
+                src={`/sponsors/new/${sponsor.logo}`}
                 alt={sponsor.name}
                 className={styles.sponsorLogo}
                 width={200}

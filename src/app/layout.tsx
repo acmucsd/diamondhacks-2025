@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import MLHBanner from '@/components/MLHBanner';
 import '@/styles/globals.scss';
 import type { Metadata } from 'next';
 import { DM_Sans } from 'next/font/google';

@@ -37,6 +37,11 @@ const Footer: React.FC = () => {
           <Facebook />
         </Link>
       </div>
+      <div className={styles.links}>
+        <Link href="https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md">
+          <Typography variant="body/large">MLH Code of Conduct</Typography>
+        </Link>
+      </div>
     </div>
   );
 };
