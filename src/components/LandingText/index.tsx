@@ -40,6 +40,13 @@ const LandingText = ({ className = '' }: LandingTextProps) => {
           >
             Sponsor Us
           </Link>
+          <Link
+            href="http://acmurl.com/diamondhacks-volunteer-interest"
+            className={styles.button}
+            data-variant="secondary"
+          >
+            Volunteer
+          </Link>
         </div>
       </div>
     </div>
