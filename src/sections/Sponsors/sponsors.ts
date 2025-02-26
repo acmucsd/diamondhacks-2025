@@ -15,4 +15,9 @@ export const SPONSORS: Sponsor[] = [
     logo: 'casgc.png',
     link: 'https://casgc.ucsd.edu/',
   },
+  {
+    name: 'HHKB',
+    logo: 'hhkb.svg',
+    link: 'https://hhkeyboard.us/',
+  },
 ];
