@@ -20,4 +20,14 @@ export const SPONSORS: Sponsor[] = [
     logo: 'hhkb.svg',
     link: 'https://hhkeyboard.us/',
   },
+  {
+    name: 'Letta',
+    logo: 'letta.jpg',
+    link: 'https://www.letta.com/',
+  },
+  {
+    name: 'Patient Safety Technology Challenge',
+    logo: 'pst.png',
+    link: 'https://www.patientsafetytech.com/',
+  },
 ];
